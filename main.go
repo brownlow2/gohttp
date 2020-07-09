@@ -60,7 +60,7 @@ func main() {
 }
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
-	char := Character{"Uldar the Cursed", "Elf", "Blood Hunter", 5, 46, 38, 17, 1, 30, 8, False, 3}
+	char := Character{"Uldar the Cursed", "Elf", "Blood Hunter", 5, stats.Stats{46, 38, 17, 1, 30, 8, false, 3}}
 	if err := html_resp.Execute(w, char); err != nil {
 		log.Fatal(err)
 	}

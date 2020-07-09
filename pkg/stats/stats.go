@@ -22,7 +22,7 @@ func (s *Stats) IncreaseTotalHP(amount int) {
 
 func (s *Stats) IncreaseCurrentHP(amount int) {
 	if (s.TotalHP - s.CurrentHP) < amount {
-		s.CurrentHP = c.TotalHP
+		s.CurrentHP = s.TotalHP
 	} else {
 		s.TotalHP += amount
 	}
@@ -32,7 +32,7 @@ func (s *Stats) DecreaseCurrentHP(amount int) {
 	// Need to add loads of death stuff here
 	s.CurrentHP -= amount
 	if s.CurrentHP < 0 {
-		s.CureentHP = 0
+		s.CurrentHP = 0
 	}
 }
 
