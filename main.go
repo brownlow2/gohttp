@@ -41,6 +41,22 @@ var html_resp = template.Must(template.New("html_resp").Parse(`
     <td>{{.ProficiencyBonus}}</td>
   </tr>
 </table>
+<h2>SKILLS</h2>
+{{range .Skills.Skills}}
+<h3>{{.SkillName}} ({{.Value}})</h3>
+<table>
+  <tr>
+    {{range .Skills}}
+    <th>{{.}}</th>
+    {{end}}
+  </tr>
+  <tr>
+    {{range $key, $value := .SkillValues}}
+    <td>{{$value}}</td>
+    {{end}}
+  </tr>
+</table>
+{{end}}
 `))
 
 func main() {
@@ -62,9 +78,9 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 	//fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
 }
 
-func build_char() character.Character {
+func build_char() *character.Character {
 	file, _ := ioutil.ReadFile("chars/uldar/character.json")
-	char = &character.Character{}
+	char := &character.Character{}
 	err := json.Unmarshal([]byte(file), char)
 	if err != nil {
 		fmt.Println(err)

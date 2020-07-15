@@ -9,5 +9,5 @@ import (
 type Character struct {
 	overview.Overview `json:"overview"`
 	stats.Stats `json:"stats"`
-	skills.Skills `json:"skills"`
+	skills.Skills `json:"skill"`
 }

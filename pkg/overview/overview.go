@@ -4,7 +4,7 @@ import (
 
 )
 
-type overview struct {
+type Overview struct {
 	Name string `json:"name"`
 	Race string `json:"race"`
 	Class string `json:"class"`

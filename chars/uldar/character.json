@@ -10,11 +10,12 @@
 		"currenthp": 37,
 		"baseac": 14
 	},
-	"skills": {
-		"name": "strength",
-		"value": 12,
-		"saving_throw": 1,
-		"skills": {
+	"skill": {
+	"skills": [
+		{
+			"name": "strength",
+			"value": 12,
+			"saving_throw": 1,
 			"names": [
 				"athletics"
 			],
@@ -22,10 +23,10 @@
 				"athletics": 1
 			}
 		},
-		"name": "dexterity",
-		"value": 18,
-		"saving_throw": 7,
-		"skills": {
+		{
+			"name": "dexterity",
+			"value": 18,
+			"saving_throw": 7,
 			"names": [
 				"acrobatics",
 				"sleight_of_hand",
@@ -37,19 +38,19 @@
 				"stealth": 4
 			}
 		},
-		"name": "constitution",
-		"value": 13,
-		"saving_throw": 2,
-		"skills": {
+		{
+			"name": "constitution",
+			"value": 13,
+			"saving_throw": 2,
 			"names": [
 			],
 			"map": {
 			}
 		},
-		"name": "intelligence",
-		"value": 11,
-		"saving_throw": 4,
-		"skills": {
+		{
+			"name": "intelligence",
+			"value": 11,
+			"saving_throw": 4,
 			"names": [
 				"arcana",
 				"history",
@@ -64,10 +65,10 @@
 				"religion": 1
 			}
 		},
-		"name": "wisdom",
-		"value": 15,
-		"saving_throw": 3,
-		"skills": {
+		{
+			"name": "wisdom",
+			"value": 15,
+			"saving_throw": 3,
 			"names": [
 				"animal_handling",
 				"insight",
@@ -83,10 +84,10 @@
 				"survival": 6
 			}
 		},
-		"name": "charisma",
-		"value": 10,
-		"saving_throw": 0,
-		"skills": {
+		{
+			"name": "charisma",
+			"value": 10,
+			"saving_throw": 0,
 			"names": [
 				"intimidation",
 				"deception",
@@ -100,5 +101,6 @@
 				"persuasion": 0
 			}
 		}
+	]
 	}
 }
