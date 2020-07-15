@@ -1,0 +1,104 @@
+{
+	"overview": {
+		"name": "Uldar the Cursed",
+		"race": "Elf",
+		"class": "Bloodhunter",
+		"Level": 7
+	},
+	"stats": {
+		"totalhp": 46,
+		"currenthp": 37,
+		"baseac": 14
+	},
+	"skills": {
+		"name": "strength",
+		"value": 12,
+		"saving_throw": 1,
+		"skills": {
+			"names": [
+				"athletics"
+			],
+			"map": {
+				"athletics": 1
+			}
+		},
+		"name": "dexterity",
+		"value": 18,
+		"saving_throw": 7,
+		"skills": {
+			"names": [
+				"acrobatics",
+				"sleight_of_hand",
+				"stealth"
+			],
+			"map": {
+				"acrobatics": 7,
+				"sleight_of_hand": 4,
+				"stealth": 4
+			}
+		},
+		"name": "constitution",
+		"value": 13,
+		"saving_throw": 2,
+		"skills": {
+			"names": [
+			],
+			"map": {
+			}
+		},
+		"name": "intelligence",
+		"value": 11,
+		"saving_throw": 4,
+		"skills": {
+			"names": [
+				"arcana",
+				"history",
+				"investigation",
+				"nature"
+			],
+			"map": {
+				"arcana": 1,
+				"history": 1,
+				"investigation": 1,
+				"nature": 1,
+				"religion": 1
+			}
+		},
+		"name": "wisdom",
+		"value": 15,
+		"saving_throw": 3,
+		"skills": {
+			"names": [
+				"animal_handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival"
+			],
+			"map": {
+				"animal_handling": 3,
+				"insight": 6,
+				"medicine": 3,
+				"perception": 3,
+				"survival": 6
+			}
+		},
+		"name": "charisma",
+		"value": 10,
+		"saving_throw": 0,
+		"skills": {
+			"names": [
+				"intimidation",
+				"deception",
+				"performance",
+				"persuasion"
+			],
+			"map": {
+				"intimidation": 0,
+				"deception": 0,
+				"performance": 0,
+				"persuasion": 0
+			}
+		}
+	}
+}

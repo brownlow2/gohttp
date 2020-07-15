@@ -5,17 +5,11 @@ import (
 	"net/http"
 	"log"
 	"html/template"
+	"encoding/json"
+	"io/ioutil"
 
-	"github.com/brownlow2/gohttp/pkg/stats"
+	"github.com/brownlow2/gohttp/pkg/character"
 )
-
-type Character struct {
-	Name string
-	Race string
-	Class string
-	Level int
-	stats.Stats
-}
 
 var html_resp = template.Must(template.New("html_resp").Parse(`
 <h1>{{.Name}}</h1>
@@ -60,9 +54,20 @@ func main() {
 }
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
-	char := Character{"Uldar the Cursed", "Elf", "Blood Hunter", 5, stats.Stats{46, 38, 17, 1, 30, 8, false, 3}}
+	//char := Character{"Uldar the Cursed", "Elf", "Blood Hunter", 5, stats.Stats{46, 38, 17, 1, 30, 8, false, 3}}
+	char := build_char()
 	if err := html_resp.Execute(w, char); err != nil {
 		log.Fatal(err)
 	}
 	//fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
+}
+
+func build_char() character.Character {
+	file, _ := ioutil.ReadFile("chars/uldar/character.json")
+	char = &character.Character{}
+	err := json.Unmarshal([]byte(file), char)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return char
 }

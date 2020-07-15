@@ -5,9 +5,9 @@ import (
 )
 
 type Stats struct {
-	TotalHP int
-	CurrentHP int
-	BaseAC int
+	TotalHP int `json:"totalhp"`
+	CurrentHP int `json:"currenthp"`
+	BaseAC int `"baseac"`
 	Initiative int
 	Speed int
 	HitDice int
